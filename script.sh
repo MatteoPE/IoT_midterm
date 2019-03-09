@@ -11,15 +11,13 @@ DEFAULT_OFv="OpenFlow13"
 SW=(
 [0]=""
 [1]="0"
-[2]="0 0"
 )
 
 # Hosts and their connections with OVS instances
 HOSTS=(
-[0]="1 0 0"
-[1]="0 1 0"
-[2]="0 0 1"
-[3]="1 1 1"
+[0]="1 0"
+[1]="0 1"
+[2]="1 1"
 )
 
 # The number of OVS instances
