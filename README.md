@@ -1,12 +1,19 @@
 Install Open vSwitch
-`sudo apt install openvswitch-switch`
+``sudo apt install openvswitch-switch``
 
-First, run
-`script.sh`
-Then run 
-`config.sh`
+This code uses Linux Network Namespace.
 
-Listare:
-`sudo ip netns`
-Dare comandi:
-`sudo ip netns exec <nome_nodo> <comando>`
+List created Network Namespaces:
+``sudo ip netn``
+Give commands to a particular Network Namespace:
+``sudo ip netns exec <netns_name> <command>``
+(if you want to open a terminal into a node: command = `bash`)
+
+After installing dhcpd,
+add to /etc/dhcp/dhcpd.conf:
+subnet 192.168.42.0 netmask 255.255.255.0 {
+  range 192.168.42.1 192.168.42.127;
+  option broadcast-address 192.168.42.255;
+}
+
+
