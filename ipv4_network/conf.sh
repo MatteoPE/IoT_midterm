@@ -25,3 +25,7 @@ ip netns exec $ROUTER systemctl restart isc-dhcp-server.service
 
 #From Host-00, run a DHCPv4 client
 ip netns exec $NODE00 dhclient -4 c.sw00-host00.1
+#From Host-01, run a DHCPv4 client
+ip netns exec $NODE01 dhclient -4 c.sw00-host01.1
+#Ping Host-01 from Host-00
+#ip netns exec $NODE00 ping 192.168.42.2

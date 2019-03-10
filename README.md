@@ -2,7 +2,6 @@ Install Open vSwitch
 ``sudo apt install openvswitch-switch``
 
 This code uses Linux Network Namespace.
-
 List created Network Namespaces:
 ``sudo ip netn``
 Give commands to a particular Network Namespace:
@@ -16,4 +15,6 @@ subnet 192.168.42.0 netmask 255.255.255.0 {
   option broadcast-address 192.168.42.255;
 }
 
+First, run `topology.sh` with superuser permissions.
+Then, run `conf.sh` (I recommend running one line of code at a time), always with superuser permissions.
 
